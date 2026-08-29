@@ -60,6 +60,21 @@ text-decoration:none;color:var(--mut);font:600 10.5px/1 'Barlow Condensed';lette
 .chip.earn{color:#7fc5ff;border-color:#7fc5ff44}
 .grp{font:600 12px/1 'Barlow Condensed';letter-spacing:.22em;color:var(--in);margin:16px 0 10px}
 .grp-out{color:var(--out)}
+/* khoi "cau thu di" gap lai */
+.out-wrap{margin-top:6px}
+.out-wrap>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;
+padding:9px 12px;border:1px solid #ff6b6b33;border-radius:10px;background:#170f18;
+transition:background .15s,border-color .15s;user-select:none}
+.out-wrap>summary::-webkit-details-marker{display:none}
+.out-wrap>summary:hover{background:#1d1219;border-color:#ff6b6b55}
+.out-wrap .cnt{font:600 11px/1 'Barlow Condensed';color:var(--mut);border:1px solid var(--line);
+border-radius:99px;padding:3px 7px;letter-spacing:.06em}
+.caret{margin-left:auto;width:8px;height:8px;border-right:2px solid var(--out);
+border-bottom:2px solid var(--out);transform:rotate(45deg) translate(-2px,-2px);transition:transform .2s}
+.out-wrap[open] .caret{transform:rotate(225deg) translate(-2px,-2px)}
+.out-wrap[open]>summary{margin-bottom:10px}
+.out-wrap .cards{animation:slidein .25s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .cards{display:grid;gap:10px}
 .tcard{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);
 border-radius:var(--r);padding:12px 14px;opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
@@ -322,7 +337,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">14</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i32" alt="">
    <div class="tinfo">
      <div class="tname">Andrey Santos</div>
@@ -462,7 +477,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i8" alt=""><span class="rt-name">Sporting</span></div>
    </div>
    <div class="fee fee-loan">Cho mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="tottenham-hotspur" data-club="Tottenham">
  <div class="club-head"><img class="lg lg-big" data-i="i50" alt="">
    <div class="club-tt"><h2>Tottenham</h2>
@@ -638,7 +653,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">15</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i68" alt="">
    <div class="tinfo">
      <div class="tname">Luka Vuskovic</div>
@@ -788,7 +803,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i24" alt=""><span class="rt-name">Bayern Munich</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="manchester-city" data-club="Man City">
  <div class="club-head"><img class="lg lg-big" data-i="i53" alt="">
    <div class="club-tt"><h2>Man City</h2>
@@ -934,7 +949,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">18</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i52" alt="">
    <div class="tinfo">
      <div class="tname">Sávio</div>
@@ -1114,7 +1129,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i22" alt=""><span class="rt-name">West Ham</span></div>
    </div>
    <div class="fee fee-loan">Cho mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="newcastle-united" data-club="Newcastle">
  <div class="club-head"><img class="lg lg-big" data-i="i49" alt="">
    <div class="club-tt"><h2>Newcastle</h2>
@@ -1220,7 +1235,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">11</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i48" alt="">
    <div class="tinfo">
      <div class="tname">Sandro Tonali</div>
@@ -1330,7 +1345,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i163" alt=""><span class="rt-name">Southampton</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="arsenal-fc" data-club="Arsenal">
  <div class="club-head"><img class="lg lg-big" data-i="i151" alt="">
    <div class="club-tt"><h2>Arsenal</h2>
@@ -1446,7 +1461,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">6</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i178" alt="">
    <div class="tinfo">
      <div class="tname">Leandro Trossard</div>
@@ -1506,7 +1521,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i166" alt=""><span class="rt-name">Leverkusen</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="aston-villa" data-club="Aston Villa">
  <div class="club-head"><img class="lg lg-big" data-i="i1" alt="">
    <div class="club-tt"><h2>Aston Villa</h2>
@@ -1692,7 +1707,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">17</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i0" alt="">
    <div class="tinfo">
      <div class="tname">Morgan Rogers</div>
@@ -1862,7 +1877,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i33" alt=""><span class="rt-name">Man United</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="ipswich-town" data-club="Ipswich Town">
  <div class="club-head"><img class="lg lg-big" data-i="i218" alt="">
    <div class="club-tt"><h2>Ipswich Town</h2>
@@ -2058,7 +2073,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">18</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i242" alt="">
    <div class="tinfo">
      <div class="tname">Arijanet Murić</div>
@@ -2238,7 +2253,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i260" alt=""><span class="rt-name">Sunderland</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="manchester-united" data-club="Man United">
  <div class="club-head"><img class="lg lg-big" data-i="i33" alt="">
    <div class="club-tt"><h2>Man United</h2>
@@ -2384,7 +2399,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">10</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i269" alt="">
    <div class="tinfo">
      <div class="tname">Rasmus Højlund</div>
@@ -2484,7 +2499,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i278" alt=""><span class="rt-name">Celta de Vigo</span></div>
    </div>
    <div class="fee fee-loan">Cho mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="coventry-city" data-club="Coventry City">
  <div class="club-head"><img class="lg lg-big" data-i="i63" alt="">
    <div class="club-tt"><h2>Coventry City</h2>
@@ -2610,7 +2625,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">7</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i299" alt="">
    <div class="tinfo">
      <div class="tname">Jahnoah Markelo</div>
@@ -2680,7 +2695,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i50" alt=""><span class="rt-name">Tottenham</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="brighton-hove-albion" data-club="Brighton">
  <div class="club-head"><img class="lg lg-big" data-i="i16" alt="">
    <div class="club-tt"><h2>Brighton</h2>
@@ -2836,7 +2851,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">16</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i261" alt="">
    <div class="tinfo">
      <div class="tname">Carlos Baleba</div>
@@ -2996,7 +3011,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i193" alt=""><span class="rt-name">RB Leipzig</span></div>
    </div>
    <div class="fee fee-loan">Cho mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="brentford-fc" data-club="Brentford">
  <div class="club-head"><img class="lg lg-big" data-i="i20" alt="">
    <div class="club-tt"><h2>Brentford</h2>
@@ -3132,7 +3147,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">11</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i292" alt="">
    <div class="tinfo">
      <div class="tname">Frank Onyeka</div>
@@ -3242,7 +3257,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i151" alt=""><span class="rt-name">Arsenal</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="nottingham-forest" data-club="Nott&#x27;m Forest">
  <div class="club-head"><img class="lg lg-big" data-i="i37" alt="">
    <div class="club-tt"><h2>Nott&#x27;m Forest</h2>
@@ -3358,7 +3373,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">12</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i92" alt="">
    <div class="tinfo">
      <div class="tname">Elliot Anderson</div>
@@ -3478,7 +3493,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i41" alt=""><span class="rt-name">SSC Napoli</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="liverpool-fc" data-club="Liverpool">
  <div class="club-head"><img class="lg lg-big" data-i="i56" alt="">
    <div class="club-tt"><h2>Liverpool</h2>
@@ -3574,7 +3589,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">9</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i389" alt="">
    <div class="tinfo">
      <div class="tname">Curtis Jones</div>
@@ -3664,7 +3679,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i252" alt=""><span class="rt-name">West Bromwich Albion</span></div>
    </div>
    <div class="fee fee-na">Không rõ</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="hull-city" data-club="Hull City">
  <div class="club-head"><img class="lg lg-big" data-i="i157" alt="">
    <div class="club-tt"><h2>Hull City</h2>
@@ -3870,7 +3885,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">16</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i423" alt="">
    <div class="tinfo">
      <div class="tname">Ivor Pandur</div>
@@ -4030,7 +4045,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i56" alt=""><span class="rt-name">Liverpool FC U21</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="everton-fc" data-club="Everton">
  <div class="club-head"><img class="lg lg-big" data-i="i31" alt="">
    <div class="club-tt"><h2>Everton</h2>
@@ -4096,7 +4111,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">7</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i438" alt="">
    <div class="tinfo">
      <div class="tname">Dwight McNeil</div>
@@ -4166,7 +4181,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i2" alt=""><span class="rt-name">Chelsea</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="leeds-united" data-club="Leeds United">
  <div class="club-head"><img class="lg lg-big" data-i="i121" alt="">
    <div class="club-tt"><h2>Leeds United</h2>
@@ -4272,7 +4287,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">12</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i306" alt="">
    <div class="tinfo">
      <div class="tname">Pascal Struijk</div>
@@ -4392,7 +4407,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i16" alt=""><span class="rt-name">Brighton</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="fulham-fc" data-club="Fulham">
  <div class="club-head"><img class="lg lg-big" data-i="i226" alt="">
    <div class="club-tt"><h2>Fulham</h2>
@@ -4468,7 +4483,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">7</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i225" alt="">
    <div class="tinfo">
      <div class="tname">Saša Lukić</div>
@@ -4538,7 +4553,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i24" alt=""><span class="rt-name">Bayern Munich</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="afc-bournemouth" data-club="Bournemouth">
  <div class="club-head"><img class="lg lg-big" data-i="i58" alt="">
    <div class="club-tt"><h2>Bournemouth</h2>
@@ -4684,7 +4699,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">11</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i482" alt="">
    <div class="tinfo">
      <div class="tname">Hamed Traoré</div>
@@ -4794,7 +4809,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i491" alt=""><span class="rt-name">SS Lazio</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="crystal-palace" data-club="Crystal Palace">
  <div class="club-head"><img class="lg lg-big" data-i="i4" alt="">
    <div class="club-tt"><h2>Crystal Palace</h2>
@@ -4900,7 +4915,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">8</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i3" alt="">
    <div class="tinfo">
      <div class="tname">Maxence Lacroix</div>
@@ -4980,7 +4995,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i211" alt=""><span class="rt-name">Getafe</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section><section class="club" id="sunderland-afc" data-club="Sunderland">
  <div class="club-head"><img class="lg lg-big" data-i="i260" alt="">
    <div class="club-tt"><h2>Sunderland</h2>
@@ -5136,7 +5151,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
    </div>
    <div class="fee fee-loanret">Về từ mượn</div>
 </article></div>
- <div class="grp grp-out">CẦU THỦ ĐI</div><div class="cards"><article class="tcard is-out">
+ <details class="out-wrap"><summary class="grp grp-out">CẦU THỦ ĐI <span class="cnt">16</span><span class="caret" aria-hidden="true"></span></summary><div class="cards"><article class="tcard is-out">
    <img class="ava" data-i="i521" alt="">
    <div class="tinfo">
      <div class="tname">Eliezer Mayenda</div>
@@ -5296,7 +5311,7 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:
       <img class="lg" data-i="i193" alt=""><span class="rt-name">RB Leipzig</span></div>
    </div>
    <div class="fee fee-loanret">Hết mượn</div>
-</article></div>
+</article></div></details>
 </section>
 <footer>Nguồn: Transfermarkt, cào ngày 29/08/2026 · CLB xếp theo tổng chi · Trang làm chơi cho anh em xem tình hình chợ hè.</footer>
 </div>
@@ -5306,6 +5321,12 @@ document.querySelectorAll('[data-i]').forEach(function(el){el.src=IMG[el.dataset
 (function(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}})},{threshold:.06});
 document.querySelectorAll('.tcard').forEach(function(c){io.observe(c)});
+// mo khoi "cau thu di" -> hien the ben trong ngay (observer khong chay khi dang an)
+document.querySelectorAll('.out-wrap').forEach(function(d){
+  d.addEventListener('toggle',function(){
+    if(d.open) d.querySelectorAll('.tcard').forEach(function(c){c.classList.add('on')});
+  });
+});
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)
   document.querySelectorAll('.tcard').forEach(function(c){c.classList.add('on')});
 document.querySelectorAll('.st b').forEach(function(el){
@@ -5318,12 +5339,14 @@ var q=document.getElementById('q');
 q.addEventListener('input',function(){
   var v=q.value.trim().toLowerCase();
   document.querySelectorAll('section.club').forEach(function(sec){
-    var any=false;
+    var any=false, outHit=false;
     sec.querySelectorAll('.tcard').forEach(function(c){
       var hit=!v||c.textContent.toLowerCase().indexOf(v)>=0;
       c.classList.toggle('hid',!hit); c.classList.add('on');
-      if(hit)any=true;
+      if(hit){any=true; if(c.closest('.out-wrap'))outHit=true;}
     });
+    var d=sec.querySelector('.out-wrap');
+    if(d) d.open = v ? outHit : false;   // dang tim: tu mo neu co ket qua; xoa tim: gap lai
     sec.classList.toggle('hid',!any);
   });
 });
